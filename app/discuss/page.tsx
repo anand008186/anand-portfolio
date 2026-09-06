@@ -31,8 +31,7 @@ export default function DiscussPage() {
         <a className="text-link" href={site.github} rel="noreferrer" target="_blank">
           GitHub
         </a>
-        . Public email is configured via <code>NEXT_PUBLIC_CONTACT_EMAIL</code>{" "}
-        at deploy time.
+        .
       </p>
     </div>
   );

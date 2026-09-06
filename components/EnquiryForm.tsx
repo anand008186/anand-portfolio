@@ -34,7 +34,7 @@ export function EnquiryForm() {
     if (hasEmail) {
       return `Submits via your email client to ${site.email}. Nothing is stored on this site.`;
     }
-    return "No public inbox is configured yet. The form copies a message you can paste to LinkedIn, or set NEXT_PUBLIC_CONTACT_EMAIL before deploy.";
+    return "No public inbox is published yet. Submitting copies a message you can paste on LinkedIn.";
   }, [hasEmail]);
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
