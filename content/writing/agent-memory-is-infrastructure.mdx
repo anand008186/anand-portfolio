@@ -1,0 +1,36 @@
+---
+title: "Why agent memory is an infrastructure problem"
+summary: "Chat logs and vector dumps are not memory. Durability, schema, provenance, and evaluation are."
+date: "2026-09-01"
+status: "notes"
+tags:
+  - agent memory
+  - infrastructure
+---
+
+This is an outline, not a finished essay.
+
+## The mistake
+
+Teams bolt “memory” onto agents by concatenating recent messages or embedding everything that happened. That produces recall-shaped behavior and none of the properties you need in an operational system: inspectability, provenance, and a defined failure when the record is missing.
+
+## What memory has to be
+
+- An append-only evidence log (what happened).
+- Typed projections (failures, interventions, decisions, observations).
+- Retrieval that can filter on identity and time, not only similarity.
+- A write path that labels the agent’s own outputs so they do not silently pollute the next retrieve.
+
+## Why this is infrastructure
+
+If you cannot rebuild memory from the log, you do not have a system. You have a cache with vibes. If a retrieved item cannot point at a source, you cannot defend a decision. If evaluation only scores fluent answers, you will ship a storyteller.
+
+<FlowDiagram id="memory" />
+
+## Open questions I still want to write through
+
+- When is summarization an index rather than a source of truth?
+- How should memory be scoped across assets, tenants, and time?
+- What does a golden retrieval set look like for an industrial agent?
+
+TODO: expand with a public example once a repository is linked.

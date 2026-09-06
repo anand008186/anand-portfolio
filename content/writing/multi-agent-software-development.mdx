@@ -1,0 +1,27 @@
+---
+title: "Multi-agent software development"
+summary: "More agents are not more leverage unless the interfaces are boring and the tests are real."
+date: "2026-06-20"
+status: "notes"
+tags:
+  - agents
+  - developer tooling
+---
+
+Multi-agent setups fail in the same way distributed systems fail: unclear ownership, duplicated work, and no single place where truth is checked.
+
+## When another agent is worth it
+
+- A role with a different tool set (retrieve vs. patch vs. run tests).
+- A long-running job that should not sit in the interactive loop.
+- A critic that only has permission to run the harness, not to edit it.
+
+## When it is costume
+
+- Agents that “debate” without a shared fixture.
+- Extra coordinators that restate the prompt.
+- Parallel editors on the same file with no merge story.
+
+Prefer simple orchestration. If you cannot draw the data flow on one line, you probably added a meeting.
+
+TODO: write the longer version after you have a public multi-agent workflow you actually use, not a generic diagram.

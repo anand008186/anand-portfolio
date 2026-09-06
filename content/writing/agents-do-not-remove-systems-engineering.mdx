@@ -1,0 +1,28 @@
+---
+title: "AI agents do not remove systems engineering"
+summary: "Tool calling is a new I/O surface. Queues, identity, permissions, and failure handling remain the job."
+date: "2026-08-20"
+status: "notes"
+tags:
+  - agents
+  - systems
+---
+
+An agent that can call tools is a distributed system with a probabilistic control plane.
+
+That is not a metaphor. Tool calls have latency, partial failure, retries, and authorization. The model is allowed to choose the next call; it is not allowed to invent the semantics of your CRM, your queue, or your database.
+
+## What still has to exist
+
+- Explicit contracts for every tool: inputs, outputs, idempotency keys, error classes.
+- A place to put work that cannot finish in one request.
+- Permissions that are not “the prompt said it was okay.”
+- Evaluation that includes tool traces, not only the final paragraph.
+
+## The systems work people skip
+
+Orchestration graphs that hide the data flow. Memory that cannot be queried. Retries that double-charge or double-write. Logs that contain secrets because the fastest path was `print(payload)`.
+
+Agents make those omissions louder. They do not make them optional.
+
+TODO: turn this into a full essay with a single worked example (a webhook + tool-calling worker) without using confidential systems.
