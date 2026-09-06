@@ -1,0 +1,30 @@
+---
+title: "Building reliable integrations"
+summary: "Webhooks lie, clocks disagree, and identity is a negotiation. Reliability is idempotency plus evidence."
+date: "2026-07-30"
+status: "notes"
+tags:
+  - integrations
+  - webhooks
+  - CRM
+---
+
+<FlowDiagram id="integrations" />
+
+## Default assumptions that will hurt you
+
+- Exactly-once delivery.
+- Stable IDs across systems.
+- A meeting, a contact, and a Slack user being the same person on the first try.
+- That a 200 from your webhook handler means the downstream write succeeded.
+
+## What “reliable” means here
+
+- Persist the payload before you interpret it.
+- Process with a key you can retry safely.
+- Classify failures: auth, contract, downstream, poison message.
+- Make the human-visible action (CRM note, Slack message) a job with its own policy.
+
+This is the unglamorous half of production AI. Skip it and the model will confidently narrate a world your CRM does not contain.
+
+TODO: add a public-safe incident pattern library (duplicate webhook, delayed meeting artifact, expired token) without employer specifics.

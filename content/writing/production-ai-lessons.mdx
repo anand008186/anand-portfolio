@@ -1,0 +1,20 @@
+---
+title: "Engineering lessons from production AI systems"
+summary: "A short list of lessons that survive contact with production. No invented metrics."
+date: "2026-07-15"
+status: "notes"
+tags:
+  - production AI
+---
+
+Lessons I am willing to stand behind without dressing them up as case-study numbers:
+
+1. **Evidence before interpretation.** Store what happened. Then generate.
+2. **Inconsistency is usually timing or retrieval.** Debug those before you fine-tune a story.
+3. **Idempotency is a product feature.** Users experience duplicate actions, not your worker’s retry policy.
+4. **Eval the path, not the paragraph.** Tool traces and retrieved ids belong in the score.
+5. **A prototype is a liability the day it meets retries.**
+
+This page will grow only with lessons that can be explained without confidential detail.
+
+TODO: replace this list with a longer essay once you pick which production stories are public-safe.

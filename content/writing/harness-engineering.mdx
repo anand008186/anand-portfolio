@@ -1,0 +1,26 @@
+---
+title: "Harness engineering"
+summary: "A harness is executable knowledge: capture, replay, assert, retain."
+date: "2026-09-03"
+status: "notes"
+tags:
+  - harnesses
+  - testing
+---
+
+A bug ticket is a story. A harness is a machine.
+
+Harness engineering is the practice of turning a production failure into an artifact the rest of the team — and any coding agent — can run. It is adjacent to testing, but the origin is different: you start from a real failure, not from a specification.
+
+## Properties
+
+- Deterministic inside a declared boundary.
+- Cheap in CI.
+- Free of production secrets.
+- Paired with notes about what was ruled out.
+
+## Failure mode to watch
+
+Agents will green the harness by weakening it. The harness is not the product. Production behavior is. Keep a human in the loop for the first encoding of a nasty bug.
+
+See also: the [reproducible debugging](/writing/reproducible-debugging) notes and the [harness case study](/work/harness-engineering).

@@ -1,0 +1,31 @@
+---
+title: "Context as infrastructure"
+summary: "Retrieval, boundaries, and exclusions are as load-bearing as a schema. Treat them that way."
+date: "2026-08-12"
+status: "notes"
+tags:
+  - context
+  - RAG
+  - production AI
+---
+
+Most inconsistent AI features are not model problems. They are context problems: the wrong records, the right records too late, or a boundary that leaked.
+
+## Context is a pipeline
+
+Ingestion → storage → retrieval → packing → generation → (sometimes) write-back.
+
+Each stage has a contract. If you only version the prompt, you will spend weeks arguing with a model that never saw the field that would have contradicted it.
+
+## Boundaries
+
+Not everything that can be retrieved should be. Tenant isolation, PII, and “this document is stale” are infrastructure. Putting them in the system prompt is not a control.
+
+## What to version
+
+- Chunking and filters.
+- Tool schemas.
+- The packing order (what is allowed to occupy the window).
+- The model, last.
+
+TODO: add a public packing checklist when the longer piece is written.

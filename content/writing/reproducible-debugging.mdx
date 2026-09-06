@@ -1,0 +1,37 @@
+---
+title: "Reproducible debugging for AI-assisted engineering"
+summary: "Agents are only as useful as the feedback loop you give them. Make the failure stand still."
+date: "2026-09-02"
+status: "notes"
+tags:
+  - debugging
+  - harnesses
+  - agents
+---
+
+The first occurrence of a difficult failure requires investigation. The second occurrence should be cheap.
+
+That sentence is the whole product idea. Everything else is mechanism.
+
+## Why AI makes this sharper
+
+Coding agents can read a lot of logs. They cannot cheaply reconstruct a race, a duplicate webhook, or a retrieval miss unless you give them a replay. Without a harness they re-derive the same story, patch the wrong layer, and leave you with two bugs.
+
+## The loop
+
+<FlowDiagram id="harness" />
+
+Capture at the boundary where non-determinism enters. Replay inside it. Keep the red test. Let humans or agents work against that artifact. Do not let the agent “fix” the harness until production is also fixed.
+
+## What belongs in the capture
+
+- Ordering of events, not only the final database row.
+- Clocks.
+- Model and tool traces, versioned.
+- The identity keys you thought were stable.
+
+Redact. Then minimize — after the failure is red.
+
+## What I will not claim here
+
+I will not invent incident counts, time-to-diagnose, or a product that does this automatically. The claim is narrower: reproducibility is the interface between production engineering and AI-assisted work.

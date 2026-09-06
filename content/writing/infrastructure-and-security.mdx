@@ -1,0 +1,24 @@
+---
+title: "Infrastructure and security notes"
+summary: "Reliability and security share a root: defined boundaries, least privilege, and evidence you can audit."
+date: "2026-06-01"
+status: "notes"
+tags:
+  - infrastructure
+  - security
+---
+
+I am increasing focus on infrastructure, reliability, and security. This page is a placeholder for that thread, not a certification claim.
+
+## The overlap
+
+A webhook handler that logs raw payloads is a reliability convenience and a security incident. A tool-calling agent without scoped credentials is an orchestration demo and an access-control hole. A memory store without tenant filters is a retrieval feature and a data breach.
+
+## What I want this series to cover later
+
+- Secret handling in agent traces.
+- Tenant isolation in retrieval.
+- Supply chain and CI runner trust.
+- What “eval data” is allowed to contain.
+
+TODO: do not publish specific employer controls. Keep this at the level of engineering practice.
