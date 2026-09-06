@@ -16,9 +16,9 @@ export default function WorkIndexPage() {
         <p className="kicker">Work</p>
         <h1>Selected work</h1>
         <p className="lede">
-          Four pieces. Each is about a class of problem, the constraints, and
-          the engineering decisions — not a gallery of technologies. Professional
-          work is described without confidential internals.
+          Architecture, constraints, tradeoffs, and lessons from building
+          production AI and distributed systems. Professional work is described
+          at a public-safe level.
         </p>
       </header>
       <div className="work-list">

@@ -16,12 +16,10 @@ export default function WritingIndexPage() {
     <div className="page-wrap">
       <header className="article-header">
         <p className="kicker">Writing</p>
-        <h1>Notes, not SEO pages</h1>
+        <h1>Notes from building real systems</h1>
         <p className="lede">
-          Seeded outlines for technical essays. Drafts stay marked as drafts
-          until the argument is actually finished. The themes are the same as
-          the engineering work: memory, reproducibility, integrations, and
-          production AI.
+          Working notes on memory, reproducibility, integrations, infrastructure,
+          and what production teaches us about AI engineering.
         </p>
       </header>
       {posts.length === 0 ? (

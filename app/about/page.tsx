@@ -5,7 +5,7 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About",
-  description: `About ${site.name}: founding engineer working where AI meets production software.`,
+  description: `About ${site.name}: full-stack and AI engineer building dependable production software.`,
   alternates: { canonical: "/about" },
 };
 
@@ -21,11 +21,11 @@ export default function AboutPage() {
       </header>
       <div className="prose">
         <p>
-          I build and fix systems where AI meets production software. The useful
-          work is usually poorly specified: an agent that almost works, an
-          integration that fails under retries, a prototype that cannot survive
-          real traffic, a bug that only appears when two systems disagree about
-          time or identity.
+          I’m a full-stack and AI engineer who likes the hard middle between a
+          promising idea and dependable software. That means shaping the product,
+          building the interface and backend, and staying with the details—data,
+          integrations, infrastructure, and failure modes—that make it work in
+          the real world.
         </p>
         <p>
           I am a founding engineer at Curvo AI, working on production AI
@@ -35,10 +35,9 @@ export default function AboutPage() {
           infrastructure, reliability, and security.
         </p>
         <p>
-          Founders and engineering leaders usually hire me when they need
-          ownership, not a ticket-taker: someone who can take an ambiguous
-          problem, make the failure reproducible, and ship a system that still
-          works after the demo.
+          I work best with founders and engineering leaders who need ownership:
+          someone who can clarify an ambiguous problem, make sensible technical
+          tradeoffs, and ship a system that keeps working after the demo.
         </p>
         <h2>Background</h2>
         <ul>
@@ -74,8 +73,8 @@ export default function AboutPage() {
         </p>
         <h2>Contact</h2>
         <p>
-          The conversion path is a single one: discuss a project. GitHub and
-          LinkedIn are public.
+          If you are building an AI product, connecting difficult systems, or
+          taking a prototype into production, tell me what you are working on.
         </p>
       </div>
       <div className="hero-actions" style={{ marginTop: "1.5rem" }}>

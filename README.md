@@ -9,7 +9,7 @@ Production-oriented site for freelance and consulting work in AI systems, produc
 - MDX writing via `next-mdx-remote`
 - Static generation for pages and content
 
-No database. Enquiry form uses `mailto:` when `NEXT_PUBLIC_CONTACT_EMAIL` is set; otherwise it copies a message for LinkedIn.
+No database. Enquiries are delivered by FormSubmit's free hosted form endpoint.
 
 ## Local development
 
@@ -31,7 +31,14 @@ npm run build
 Copy `.env.example` to `.env.local`:
 
 - `NEXT_PUBLIC_SITE_URL` — canonical origin (required for correct sitemap, robots, Open Graph). Example: `https://your-domain.vercel.app`
-- `NEXT_PUBLIC_CONTACT_EMAIL` — public inbox for **Discuss a project**. Leave empty to keep the copy-to-clipboard fallback.
+- `NEXT_PUBLIC_CONTACT_EMAIL` — inbox for **Discuss a project**. Defaults to `anandranjan789@gmail.com`.
+
+### Enquiry form activation
+
+FormSubmit requires a one-time email confirmation. After the site is deployed,
+send one test enquiry, open the activation email delivered to the contact inbox,
+and approve it. Future enquiries will then arrive directly by email. The form
+includes FormSubmit's honeypot field and default reCAPTCHA protection.
 
 ## Deploy on Vercel
 

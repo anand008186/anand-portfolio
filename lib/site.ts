@@ -1,18 +1,17 @@
 export const site = {
   name: "Anand Ranjan",
-  title: "Anand Ranjan — Founding Engineer",
-  role: "Founding Engineer",
-  positioning: "AI Systems · Production Engineering · Infrastructure · Integrations",
-  headline: "I build systems where AI meets production software.",
+  title: "Anand Ranjan — Full-stack & AI Engineer",
+  role: "Full-stack & AI Engineer",
+  positioning: "AI products · Full-stack systems · Integrations · Reliability",
+  headline: "I turn ambitious AI ideas into reliable software.",
   supporting:
-    "I work across AI agents, full-stack systems, integrations, reliability, infrastructure and developer tooling — turning ambiguous engineering problems into production systems.",
+    "I help startups design, build, and harden AI products—from the interface and APIs to agents, integrations, infrastructure, and everything production demands.",
   description:
-    "Founding engineer working at the intersection of AI systems and production software. Available for focused freelance and consulting engagements in agents, integrations, infrastructure, and difficult debugging.",
+    "Full-stack and AI engineer building production-ready agents, products, integrations, and infrastructure for ambitious startups.",
   current:
-    "Currently building production AI systems at Curvo AI.",
-  locationNote: "TODO: add location / timezone if you want it public.",
+    "Currently building production AI systems at Curvo AI. Available for select freelance projects.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
-  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "",
+  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "anandranjan789@gmail.com",
   github: "https://github.com/anand008186",
   linkedin: "https://www.linkedin.com/in/anand-ranjan-351b6b201",
   education: {

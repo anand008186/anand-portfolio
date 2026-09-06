@@ -60,13 +60,6 @@ export default async function WorkPage({ params }: Props) {
         <p>{item.outcome}</p>
       </div>
 
-      {item.todos?.length ? (
-        <div className="todo">
-          <strong>TODO (factual material still needed): </strong>
-          {item.todos.join(" ")}
-        </div>
-      ) : null}
-
       <div className="hero-actions" style={{ marginTop: "2rem" }}>
         <CtaLink />
       </div>

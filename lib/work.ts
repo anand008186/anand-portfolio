@@ -109,7 +109,7 @@ export const work: WorkItem[] = [
       },
     ],
     outcome:
-      "TODO: add only factual, non-confidential outcomes you are willing to publish (scope of systems touched, kinds of workflows shipped). No metrics unless you provide them.",
+      "A production pattern for AI features at the CRM boundary: durable evidence, idempotent processing, explicit context assembly, and conservative writes back to operational systems.",
     todos: [
       "Optional: public-safe description of Curvo AI product surface, if you want the company named in this case study.",
       "Optional: which CRM/meeting providers you are willing to name from public product facts only.",
@@ -199,7 +199,7 @@ export const work: WorkItem[] = [
       },
     ],
     outcome:
-      "Public architecture and evaluation approach. TODO: link a public repository or write-up if/when you want this tied to a specific codebase.",
+      "A public architecture and evaluation approach for memory that remains durable, queryable, and auditable as an agent’s operational history grows.",
     todos: [
       "Add a public GitHub URL if this maps to a real public repo.",
       "Add diagrams or eval notes from that repo once it is public.",
@@ -290,7 +290,7 @@ export const work: WorkItem[] = [
       },
     ],
     outcome:
-      "Method and architecture for turning once-expensive failures into cheap, executable knowledge. TODO: attach a public harness example when you have a repo you want featured.",
+      "A repeatable method for turning once-expensive failures into executable knowledge that teammates, CI, and coding agents can reuse.",
   },
   {
     slug: "ci-distributed-infrastructure",
@@ -378,7 +378,7 @@ export const work: WorkItem[] = [
       },
     ],
     outcome:
-      "TODO: add only public, non-confidential facts you want attached (tenure, problem classes you owned). Do not add speed, cost, or customer claims.",
+      "A resilient distributed execution model that treats leasing, retries, idempotency, and observability as core product behavior rather than operational cleanup.",
     todos: [
       "Confirm which public MonkCI details you want named vs kept generic.",
     ],

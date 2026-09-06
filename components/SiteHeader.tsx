@@ -13,9 +13,14 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <div className="page-wrap header-inner">
-        <Link href="/" className="wordmark" onClick={() => setOpen(false)}>
+        <Link
+          href="/"
+          className="wordmark"
+          aria-label={`${site.name}, home`}
+          onClick={() => setOpen(false)}
+        >
+          <span className="wordmark-mark" aria-hidden="true">AR</span>
           <span className="wordmark-name">{site.name}</span>
-          <span className="wordmark-role">{site.role}</span>
         </Link>
         <nav className="nav-desktop" aria-label="Primary">
           <ul>
@@ -39,7 +44,8 @@ export function SiteHeader() {
         </nav>
         <div className="header-actions">
           <Link href={cta.href} className="btn btn-primary btn-compact">
-            {cta.label}
+            <span className="cta-label-full">{cta.label}</span>
+            <span className="cta-label-short">Let’s talk</span>
           </Link>
           <button
             type="button"

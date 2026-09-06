@@ -14,11 +14,12 @@ export default function DiscussPage() {
     <div className="page-wrap">
       <header className="article-header">
         <p className="kicker">{cta.label}</p>
-        <h1>Tell me what is broken or what you need built.</h1>
+        <h1>What are you trying to build or fix?</h1>
         <p className="lede">
-          I occasionally take focused engagements: production rescue, agent
-          sprints, integrations, architecture reviews, and hardening prototypes.
-          No account required. If the work is not a fit, I will say so.
+          Share the problem, the context, and where you are stuck. I take on
+          focused AI product builds, integrations, architecture reviews, and
+          prototype-to-production work. If I can help, I’ll suggest a practical
+          next step.
         </p>
       </header>
       <EnquiryForm />
